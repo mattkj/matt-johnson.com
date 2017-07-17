@@ -26,7 +26,7 @@ gulp.task('bs-reload', function () {
 
 gulp.task('images', function(){
   gulp.src('src/images/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }, { verbose: true}))
     .pipe(gulp.dest('dist/images/'));
 });
 
