@@ -1,16 +1,17 @@
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     rename = require('gulp-rename');
-var autoprefixer = require('gulp-autoprefixer');
-var babel = require('gulp-babel');
-var concat = require('gulp-concat');
-var jshint = require('gulp-jshint');
-var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin'),
+let autoprefixer = require('gulp-autoprefixer');
+let babel = require('gulp-babel');
+let concat = require('gulp-concat');
+let jshint = require('gulp-jshint');
+let uglify = require('gulp-uglify');
+let imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache');
-var cleanCSS = require('gulp-clean-css');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
+let cleanCSS = require('gulp-clean-css');
+let sourcemaps = require('gulp-sourcemaps');
+let sass = require('gulp-sass');
+let browserSync = require('browser-sync');
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -41,7 +42,9 @@ gulp.task('styles', function(){
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('dist/styles/'))
     .pipe(rename({suffix: '.min'}))
+    .pipe(sourcemaps.init())
     .pipe(cleanCSS())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/styles/'))
     .pipe(browserSync.reload({stream:true}))
 });
