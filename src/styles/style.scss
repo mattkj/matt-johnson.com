@@ -1,0 +1,148 @@
+body{
+  font-family: 'Raleway';
+  // background: #f9f9f9;
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/crossword.png');
+}
+
+strong{
+  font-weight: 600;
+}
+
+.container{
+  margin-top: 2%;
+}
+
+h1, h2{
+  font-family: 'Raleway';
+}
+
+h1{
+  margin: 0;
+  font-weight: 400;
+}
+
+h2{
+  color: orangered;
+}
+
+h2 > span {
+  font-size: .8em;
+  color: initial;
+}
+
+.links{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.links > a{
+  margin-right: 20px;
+}
+
+header a,
+section a{
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  // border-bottom: 2px solid;
+}
+
+header a:hover,
+section a:hover{
+  color: orangered;
+}
+
+header a:after,
+section a:after{
+  content: "";
+  background: #1EAEDB;
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all .2s;
+}
+
+header a:hover:after,
+section a:hover:after{
+  background: orangered;
+  // transform: rotate(10deg);
+  height: 4px;
+  // top: 0;
+}
+
+.lead{
+  font-size: 1.8rem;
+}
+
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  flex: 0 1 100%;
+}
+
+
+
+.project > img{
+  border: 1px solid gray;
+}
+
+@media (min-width: 800px) {
+  .project{
+    flex-basis: 49%;
+  }
+}
+
+
+.details{
+  background: gray;
+  color: white;
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.details > p{
+  flex: 1;
+  // margin: 0;
+}
+
+.heading{
+  font-weight: 600;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between
+}
+
+.button:first-child{
+  margin-right: 5px;
+}
+
+.button{
+  background: rgba(255,255,255,.6);
+  margin-bottom: 0;
+  transition: all 0.3s;
+  flex: 1;
+}
+
+.button:hover{
+  background: rgba(255,255,255,1);
+  flex: 2;
+}
+
+footer{
+  text-align: center;
+  margin-bottom: 20px;
+}
