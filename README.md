@@ -1,6 +1,6 @@
 # matt-johnson.com
 
-##Todo
+## Todo
 
 - SASS nesting
 - SASS organization
@@ -9,3 +9,7 @@
 - Fill out projects section
 - Opening paragraph
 - Possible sticky header on scroll
+- Google Analytics
+- add some JS
+- setup hosting
+- FTPLoy account
