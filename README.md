@@ -13,3 +13,4 @@
 - add some JS
 - setup hosting
 - FTPLoy account
+- fix package.json warnings
