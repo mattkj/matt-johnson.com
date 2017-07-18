@@ -1,11 +1,18 @@
+$link-color: #1EAEDB;
+$accent-color: orangered;
+$bold-weight: 600;
+$margin: 20px;
+$font-family: 'Raleway';
+
+
 body{
-  font-family: 'Raleway';
-  // background: #f9f9f9;
-  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/crossword.png');
+  font-family: $font-family;
+  /* Background pattern from Subtle Patterns */
+  background: url('../images/background.png');
 }
 
 strong{
-  font-weight: 600;
+  font-weight: $bold-weight;
 }
 
 .container{
@@ -13,7 +20,7 @@ strong{
 }
 
 h1, h2{
-  font-family: 'Raleway';
+  font-family: $font-family;
 }
 
 h1{
@@ -22,7 +29,7 @@ h1{
 }
 
 h2{
-  color: orangered;
+  color: $accent-color;
 }
 
 h2 > span {
@@ -32,11 +39,11 @@ h2 > span {
 
 .links{
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: $margin;
 }
 
 .links > a{
-  margin-right: 20px;
+  margin-right: $margin;
 }
 
 header a,
@@ -44,18 +51,17 @@ section a{
   text-decoration: none;
   position: relative;
   display: inline-block;
-  // border-bottom: 2px solid;
 }
 
 header a:hover,
 section a:hover{
-  color: orangered;
+  color: $accent-color;
 }
 
 header a:after,
 section a:after{
   content: "";
-  background: #1EAEDB;
+  background: $link-color;
   display: block;
   width: 100%;
   height: 2px;
@@ -67,10 +73,8 @@ section a:after{
 
 header a:hover:after,
 section a:hover:after{
-  background: orangered;
-  // transform: rotate(10deg);
+  background: $accent-color;
   height: 4px;
-  // top: 0;
 }
 
 .lead{
@@ -86,11 +90,9 @@ section a:hover:after{
 .project{
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: $margin;
   flex: 0 1 100%;
 }
-
-
 
 .project > img{
   border: 1px solid gray;
@@ -101,7 +103,6 @@ section a:hover:after{
     flex-basis: 49%;
   }
 }
-
 
 .details{
   background: gray;
@@ -114,16 +115,15 @@ section a:hover:after{
 
 .details > p{
   flex: 1;
-  // margin: 0;
 }
 
 .heading{
-  font-weight: 600;
+  font-weight: $bold-weight;
 }
 
 .buttons{
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .button:first-child{
@@ -144,5 +144,5 @@ section a:hover:after{
 
 footer{
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: $margin;
 }
