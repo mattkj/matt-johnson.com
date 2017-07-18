@@ -4,6 +4,7 @@ let gulp = require('gulp'),
 let autoprefixer = require('gulp-autoprefixer');
 let babel = require('gulp-babel');
 let concat = require('gulp-concat');
+let del = require('del');
 let jshint = require('gulp-jshint');
 let uglify = require('gulp-uglify');
 let imagemin = require('gulp-imagemin'),
@@ -27,7 +28,7 @@ gulp.task('bs-reload', function () {
 
 gulp.task('images', function(){
   gulp.src('src/images/**/*')
-    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }, { verbose: true}))
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }, { verbose: true})))
     .pipe(gulp.dest('dist/images/'));
 });
 
@@ -67,10 +68,14 @@ gulp.task('scripts', function(){
     .pipe(browserSync.reload({stream:true}))
 });
 
+gulp.task('clean', function() {
+  return del.sync('dist');
+})
+
 gulp.task('watch', function(){
   gulp.watch("src/styles/**/*.scss", ['styles']);
   gulp.watch("src/scripts/**/*.js", ['scripts']);
   gulp.watch("*.html", ['bs-reload']);
 });
 
-gulp.task('default', ['styles','images','scripts','watch','browser-sync']);
+gulp.task('default', ['clean','styles','images','scripts','watch','browser-sync']);
