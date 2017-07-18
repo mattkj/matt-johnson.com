@@ -17,7 +17,7 @@ let browserSync = require('browser-sync');
 gulp.task('browser-sync', function() {
   browserSync({
     server: {
-       baseDir: "./"
+       baseDir: "./dist"
     }
   });
 });
@@ -68,6 +68,11 @@ gulp.task('scripts', function(){
     .pipe(browserSync.reload({stream:true}))
 });
 
+gulp.task('copy', function () {
+  gulp.src('src/index.html')
+      .pipe(gulp.dest('dist'));
+});
+
 gulp.task('clean', function() {
   return del.sync('dist');
 })
@@ -75,7 +80,7 @@ gulp.task('clean', function() {
 gulp.task('watch', function(){
   gulp.watch("src/styles/**/*.scss", ['styles']);
   gulp.watch("src/scripts/**/*.js", ['scripts']);
-  gulp.watch("*.html", ['bs-reload']);
+  gulp.watch("src/*.html", ['copy','bs-reload']);
 });
 
-gulp.task('default', ['clean','styles','images','scripts','watch','browser-sync']);
+gulp.task('default', ['clean','styles','images','scripts','copy','watch','browser-sync']);
