@@ -8,6 +8,10 @@
   },
   "author": "Matt Johnson",
   "license": "UNLICENSED",
+  "repository": { 
+    "type" : "git",
+    "url" : "https://github.com/mattkj/matt-johnson.com.git"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
