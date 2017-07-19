@@ -2,8 +2,6 @@
 
 ## Todo
 
-- SASS nesting
-- SASS organization
 - Footer links
 - Resume PDF
 - Fill out projects section
@@ -13,4 +11,3 @@
 - add some JS
 - setup hosting
 - FTPLoy account
-- fix package.json warnings

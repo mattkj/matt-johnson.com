@@ -30,51 +30,44 @@ h1{
 
 h2{
   color: $accent-color;
-}
-
-h2 > span {
-  font-size: .8em;
-  color: initial;
+  span {
+    font-size: .8em;
+    color: initial;
+  }
 }
 
 .links{
   display: flex;
   margin-bottom: $margin;
+  a{
+    margin-right: $margin;
+  }
 }
 
-.links > a{
-  margin-right: $margin;
-}
 
 header a,
 section a{
   text-decoration: none;
   position: relative;
   display: inline-block;
-}
-
-header a:hover,
-section a:hover{
-  color: $accent-color;
-}
-
-header a:after,
-section a:after{
-  content: "";
-  background: $link-color;
-  display: block;
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: all .2s;
-}
-
-header a:hover:after,
-section a:hover:after{
-  background: $accent-color;
-  height: 4px;
+  &:hover{
+    color: $accent-color;
+  }
+  &:after{
+    content: "";
+    background: $link-color;
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .2s;
+  }
+  &:hover:after{
+    background: $accent-color;
+    height: 4px;
+  }
 }
 
 .lead{
@@ -92,14 +85,10 @@ section a:hover:after{
   flex-direction: column;
   margin-bottom: $margin;
   flex: 0 1 100%;
-}
-
-.project > img{
-  border: 1px solid gray;
-}
-
-@media (min-width: 800px) {
-  .project{
+  img{
+    border: 1px solid gray;
+  }
+  @media (min-width: 800px) {
     flex-basis: 49%;
   }
 }
@@ -111,10 +100,9 @@ section a:hover:after{
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-.details > p{
-  flex: 1;
+  p{
+    flex: 1;
+  }
 }
 
 .heading{
@@ -126,20 +114,18 @@ section a:hover:after{
   justify-content: space-between;
 }
 
-.button:first-child{
-  margin-right: 5px;
-}
-
 .button{
   background: rgba(255,255,255,.6);
   margin-bottom: 0;
   transition: all 0.3s;
   flex: 1;
-}
-
-.button:hover{
-  background: rgba(255,255,255,1);
-  flex: 2;
+  &:first-child{
+    margin-right: 5px;
+  }
+  &:hover{
+    background: rgba(255,255,255,1);
+    flex: 2;
+  }
 }
 
 footer{
