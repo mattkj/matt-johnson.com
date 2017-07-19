@@ -1,13 +1,13 @@
 {
   "name": "matt-johnson.com",
   "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "description": "Matt Johnson - Web Developer",
+  "main": "scripts/main.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matt Johnson",
-  "license": "",
+  "license": "UNLICENSED",
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
