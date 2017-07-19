@@ -67,7 +67,7 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('copy', function () {
-  gulp.src('src/index.html')
+  gulp.src('src/*.+(html|pdf)')
       .pipe(gulp.dest('dist'));
 });
 
