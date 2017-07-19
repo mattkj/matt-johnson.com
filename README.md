@@ -2,7 +2,6 @@
 
 ## Todo
 
-- Footer links
 - Resume PDF
 - Fill out projects section
 - Opening paragraph
