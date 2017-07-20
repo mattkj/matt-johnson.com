@@ -10,7 +10,6 @@ let uglify = require('gulp-uglify');
 let imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache');
 let cleanCSS = require('gulp-clean-css');
-let sourcemaps = require('gulp-sourcemaps');
 let sass = require('gulp-sass');
 let browserSync = require('browser-sync');
 
@@ -33,7 +32,7 @@ gulp.task('images', function(){
 });
 
 gulp.task('styles', function(){
-  gulp.src(['src/styles/**/*.scss'])
+  gulp.src(['src/styles/**/*.+(scss|css)'])
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
@@ -41,10 +40,8 @@ gulp.task('styles', function(){
     }}))
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(sourcemaps.init())
     .pipe(cleanCSS())
-    .pipe(sourcemaps.write())
+    .pipe(concat('style.min.css'))
     .pipe(gulp.dest('dist/styles/'))
     .pipe(browserSync.reload({stream:true}))
 });
