@@ -7,8 +7,7 @@ let concat = require('gulp-concat');
 let del = require('del');
 let jshint = require('gulp-jshint');
 let uglify = require('gulp-uglify');
-let imagemin = require('gulp-imagemin'),
-    cache = require('gulp-cache');
+let cache = require('gulp-cache');
 let cleanCSS = require('gulp-clean-css');
 let sass = require('gulp-sass');
 let browserSync = require('browser-sync');
@@ -27,7 +26,6 @@ gulp.task('bs-reload', function () {
 
 gulp.task('images', function(){
   gulp.src('src/images/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }, { verbose: true})))
     .pipe(gulp.dest('dist/images/'));
 });
 
