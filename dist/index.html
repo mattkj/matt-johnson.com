@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Matt Johnson - Web Developer</title>
 
+  <link rel="dns-prefetch" href="//ajax.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//www.google-analytics.com">
 
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:300,400,600">
   <link rel="stylesheet" href="styles/style.min.css">
 </head>
 
@@ -120,16 +120,33 @@
     </footer>
   </div>
 
-  <script src="scripts/main.min.js"></script>
+  <!-- Web Font Loader  -->
+  <script>
+    WebFontConfig = {
+      google: {
+        families: ['Raleway:300,400,600']
+      }
+    };
+
+    (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+      wf.async = true;
+      s.parentNode.insertBefore(wf, s);
+    })(document);
+  </script>
+  <!-- End Web Font Loader  -->
 
   <!-- Google Analytics -->
   <script>
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', 'UA-102887192-1', 'auto');
-  ga('send', 'pageview');
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-102887192-1', 'auto');
+    ga('send', 'pageview');
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <!-- End Google Analytics -->
+
+
 </body>
 
 </html>
