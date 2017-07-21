@@ -20,6 +20,14 @@ strong{
   margin-bottom: 2%;
 }
 
+ol, ul{
+  padding-left: 20px;
+}
+
+ul{
+  list-style-position: outside;
+}
+
 hr{
   margin: $margin 0;
 }
@@ -106,9 +114,6 @@ footer a{
   flex: 1;
   display: flex;
   flex-direction: column;
-  p{
-    flex: 1;
-  }
 }
 
 .heading{
@@ -118,6 +123,7 @@ footer a{
 .buttons{
   display: flex;
   justify-content: space-between;
+  margin-top: auto;
 }
 
 .button{
