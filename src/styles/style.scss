@@ -49,14 +49,26 @@ h2{
   }
 }
 
+header{
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 900px){
+    flex-direction: row;
+  }
+}
+
 .links{
   display: flex;
+  align-items: flex-start;
   margin-bottom: $margin;
   a{
     margin-right: $margin;
   }
   &:last-child{
     margin-right: 0;
+  }
+  @media (min-width: 900px){
+    margin-left: auto;
   }
 }
 
