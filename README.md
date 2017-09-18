@@ -1,7 +1,3 @@
 # matt-johnson.com
 
-## Todo
-
-- Possible sticky header on scroll
-- Google Analytics
-- add some JS
+My personal site. Check out the src folder above.
